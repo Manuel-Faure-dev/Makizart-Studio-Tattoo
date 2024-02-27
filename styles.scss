@@ -1,0 +1,413 @@
+@mixin text-shadow($t1, $t2, $t3, $color) {
+    text-shadow: #{$t1}px #{$t2}px #{$t3}px #{$color};
+}
+@mixin box-shadow($t1, $t2, $t3, $color) {
+    box-shadow: #{$t1}px #{$t2}px #{$t3}px #{$color};
+}
+
+//font-family: 'Poppins', sans-serif;
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: black;
+
+    a {
+        text-decoration: none;
+    }
+}
+
+header {
+    position: fixed;
+    top: 0%;
+    width: 100%;
+    nav {
+        padding: 0 1.5em;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.7);
+        height: 6em;
+        .phone {
+            color: white;
+            font-size: 1.4em;
+            @include text-shadow(2, 1, 4, black);
+            font-family: 'Poppins', sans-serif;
+        }
+        .rs-logo-div {
+            display: flex;
+            width: 9%;
+            justify-content: space-around;
+        }
+
+        .logo {
+            max-height: 3.5em;
+            @include box-shadow(2, 2, 7, black);
+        }
+        .logo-fb {
+            max-height: 1.8em;
+            @include text-shadow(2, 2, 3, black);
+        }
+        .logo-insta {
+            max-height: 1.8em;
+            @include text-shadow(2, 2, 3, black);
+        }
+
+        .audio {
+            @include text-shadow(2, 2, 7, black);
+            width: 215px;
+        }
+        a {
+            font-size: 1.2em;
+            font-weight: 400;
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            @include text-shadow(2, 1, 4, black);
+            padding: 0;
+            //height: 2em;
+            transition: all 1000ms ease-in-out;
+        }
+        a:nth-child(n + 3):nth-child(-n + 7):hover {
+            text-decoration: underline overline;
+            text-decoration-color: #70056f;
+            text-decoration-thickness: 0.5em;
+        }
+    }
+}
+main {
+    .home-section {
+        background-image: url('./assets/fond\ spirit.webp');
+        height: max-content;
+        background-attachment: scroll, fixed;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border: 0.5em double white;
+        background-color: #000000;
+
+        h1 {
+            width: 60%;
+            color: honeydew;
+            font-size: 4em;
+            font-weight: 400;
+            text-shadow: 2px 1px 4px black;
+            text-align: center;
+            border-width: 0.1em;
+            border-style: double;
+            border-color: rgb(177, 105, 105);
+            border-radius: 50%;
+            //border-top-left-radius: 0.2em;
+            box-shadow: 20px 10px 40px black;
+            padding: 0.4em 1.2em;
+            margin: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        p {
+            color: white;
+            font-size: 1.8em;
+        }
+    }
+    .presentation-section {
+        background-color: rgba(0, 0, 0, 1);
+        border: 0.5em double white;
+        margin-top: -0.2em;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        //position: relative;
+        .presentation-article {
+            padding: 0em 0 2em 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            overflow: hidden;
+            max-width: 1140px;
+            //background-image: url('./assets/tatoo\ fond\ noir.jpeg');
+            //position: relative;
+            h2 {
+                font-family: 'Poppins', sans-serif;
+                color: white;
+                text-align: center;
+                font-weight: 300;
+                font-size: 1.4em;
+                margin: 3em 0;
+            }
+            p {
+                font-family: 'Poppins', sans-serif;
+                color: white;
+                text-align: center;
+                font-weight: 200;
+                font-size: 1.2em;
+            }
+        }
+        .slides {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            //column-gap: 0.9em;
+        }
+
+        .slides img {
+            max-width: 13em;
+            height: 25em;
+            transition: transform 0.5s ease;
+            object-fit: cover;
+            transition: all 800ms ease-out;
+        }
+        .slides img:hover {
+            opacity: 0.4;
+        }
+        .next {
+            position: absolute;
+            right: 5rem;
+            color: white;
+            background-color: black;
+            border: none;
+            font-size: 4em;
+            background-color: transparent;
+            transition: all 500ms ease-in-out;
+        }
+        .next:hover {
+            transform: scale(1.3);
+            color: #f69218;
+        }
+        .prev {
+            position: absolute;
+            left: 5rem;
+            color: white;
+            background-color: black;
+            border: none;
+            font-size: 4em;
+            background-color: transparent;
+            transition: all 500ms ease-in-out;
+        }
+        .prev:hover {
+            transform: scale(1.3);
+            color: #f69218;
+        }
+        // .pagination {
+        //     display: flex;
+        //     justify-content: center;
+        //     margin-top: 10px;
+        // }
+        // .dot {
+        //     height: 10px;
+        //     width: 10px;
+        //     background-color: #333;
+        //     border-radius: 50%;
+        //     margin: 0 5px;
+        //     cursor: pointer;
+        // }
+        // .dot.active {
+        //     background-color: white;
+        // }
+    }
+    .owner-article {
+        max-width: 1140px;
+        display: flex;
+        padding: 0 0 5em 0;
+        .owner-div {
+            width: 60%;
+            .owner-img {
+                max-width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border: 1px solid white;
+                //@include box-shadow(3, 4, 10, grey);
+            }
+        }
+        .owner-div-text {
+            width: 40%;
+            padding: 0 1.1em;
+            //overflow: hidden; /* Empêche le dépassement du texte */
+        }
+
+        .owner-div-text p {
+            color: white;
+            text-align: center;
+            font-weight: 200;
+            font-size: 1.2em;
+            margin: 0;
+            max-height: 100%; /* Assurez-vous que le texte ne dépasse pas la hauteur de la div */
+            overflow: hidden; /* Empêche également le dépassement du texte en cas de nécessité */
+        }
+    }
+}
+
+// Section Galerie
+.galery-section {
+    margin-top: -0.1em;
+    border: 0.5em double white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    h3 {
+        text-align: center;
+        color: white;
+        font-size: 3em;
+        font-weight: 500;
+        margin: 1.5em 0;
+    }
+    .galery-article {
+        max-width: 1140px;
+        display: flex;
+        padding: 0 0 5em 0;
+        .galery-slides-div {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-content: center;
+            gap: 2em;
+        }
+
+        a {
+            img {
+                width: 12em;
+                height: 15em;
+                object-fit: cover;
+                border: 1px solid white;
+                transition: all 800ms ease-out;
+            }
+            img:hover {
+                opacity: 0.4;
+            }
+        }
+    }
+}
+
+.plan {
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+// Chevron-up pour remonter en haut de la page
+.chevron-up {
+    position: fixed;
+    filter: brightness(0) invert(1);
+    right: 30px;
+    bottom: 30px;
+    height: 4em;
+    transition: 800ms ease-in-out;
+}
+.chevron-up:hover {
+    transform: rotate(360deg);
+    transition: transform 0.8s ease;
+}
+
+// caroussel de la Galerie photo N°1
+.carousel-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    background-color: black;
+}
+
+.link-img {
+    max-height: 90vh;
+    object-fit: cover;
+    border: 1px solid white;
+}
+
+.active {
+    display: flex;
+    justify-content: center;
+}
+.link-img-reduce {
+    max-width: 960px;
+    border: 1px solid white;
+}
+
+.next {
+    position: absolute;
+    right: 15rem;
+    color: white;
+    background-color: black;
+    border: none;
+    font-size: 4em;
+    background-color: transparent;
+    transition: all 500ms ease-in-out;
+    cursor: pointer;
+}
+.next:hover {
+    transform: scale(1.3);
+}
+.prev {
+    position: absolute;
+    left: 15rem;
+    color: white;
+    background-color: black;
+    border: none;
+    font-size: 4em;
+    background-color: transparent;
+    transition: all 500ms ease-in-out;
+    cursor: pointer;
+}
+.prev:hover {
+    transform: scale(1.3);
+}
+
+//Footer
+footer {
+    width: 100%;
+    background-color: black;
+    height: 10em;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid white;
+    p {
+        font-family: 'Poppins', sans-serif;
+    }
+}
+
+// .transition-div::before {
+//     z-index: 1;
+//     content: ''; /* Contenu généré pour le dégradé */
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%; /* Hauteur du dégradé en haut */
+//     background: linear-gradient(
+//         to bottom,
+//         rgba(0, 0, 0, 0.5),
+//         rgb(10, 99, 17, 1),
+//         rgb(200, 99, 21, 0.5)
+//     ); /* Dégradé noir transparent en haut */
+// }
+
+// .transition-div::after {
+//     z-index: 1;
+//     content: ''; /* Contenu généré pour le dégradé */
+//     position: absolute;
+//     bottom: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%; /* Hauteur du dégradé en bas */
+//     background: linear-gradient(
+//         to bottom,
+//         rgba(0, 0, 0, 1),
+//         rgb(10, 99, 17, 0.5),
+//         rgb(200, 99, 21, 0.5),
+//         rgb(255, 255, 255)
+//     ); /* Dégradé noir transparent en bas */
+// }
