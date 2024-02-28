@@ -17,15 +17,28 @@
     <body>
         <header>
             <nav>
-                <a target="_blank" href="#"
-                    ><img class="logo" src="./assets/logo.jpg"
-                /></a>
-                <p class="phone">06.28.53.66.59</p>
-                <a href="#creation">Aide à la création</a>
-                <a class="" href="#galery">Réalisation</a>
-                <a class="" href="#contact">Contact</a>
-                <a class="" href="#acces">Localisation</a>
-                <a class="" href="#">Tarifs</a>
+                <div target="_blank" href="#">
+                    <img class="logo" src="./assets/logo.jpg" />
+                </div>
+                <div class="phone-div">
+                    <p class="text-phone">
+                        Parlez nous de votre projet au 06.28.53.66.59
+                    </p>
+                    <!-- <p class="phone">06.28.53.66.59</p> -->
+                </div>
+
+                <a class="home-a" href="./index.html" target="_blank"
+                    >ACCUEIL</a
+                >
+                <a class="create-a" href="./create.html" target="_blank"
+                    >AIDE A LA CREATION</a
+                >
+                <a class="realise-a" href="#galery">REALISATIONS</a>
+                <a class="contact-a" href="./contact.html" target="_blank"
+                    >CONTACT</a
+                >
+                <a class="access-a" href="#access">LOCALISATION</a>
+                <a class="count-a" href="#count">TARIFS</a>
                 <div class="rs-logo-div">
                     <a
                         target="_blank"
@@ -72,11 +85,6 @@
                             <img src="./assets/tattoo26.jpg" alt="" />
                         </a>
                     </div>
-                    <!-- <h2>
-                        Makizart Studio Tattoo : venez nous rencontrer pour
-                        parler de votre projet de tatouage à Saint-Laurent en
-                        Royans
-                    </h2> -->
                     <p>
                         Vous êtes arrivés sur la page de votre futur salon de
                         tatouage. Vous pouvez, venir rencontrer Bérenger qui
@@ -113,10 +121,15 @@
                         </p>
                     </div>
                 </article>
+                <div class="contact-us-div">
+                    <a href="./contact.html" target="_blank"
+                        ><p>NOUS CONTACTER</p></a
+                    >
+                </div>
             </section>
             <!--Section Galerie photos-->
             <section class="galery-section">
-                <h3 id="galery">Nos réalisations</h3>
+                <h3 id="galery">Réalisations</h3>
                 <article class="galery-article">
                     <div class="galery-slides-div">
                         <a href=""
@@ -212,19 +225,51 @@
                     </div>
                 </article>
             </section>
-            <!--Accès contact horaires-->
-            <section>
-                <h3>Accès</h3>
-                <iframe
-                    class="plan"
-                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d730.9632174962306!2d5.3267234807193224!3d45.02820131670517!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x52edd4fc2cb40443!2sMakizart%20Tattoo!5e1!3m2!1sfr!2sfr!4v1662152431892!5m2!1sfr!2sfr"
-                    width="600"
-                    height="450"
-                    style="border: 0"
-                    allowfullscreen=""
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
-                ></iframe>
+            <!--Section Hygiène et tarifs-->
+            <section id="count" class="hygiene-section">
+                <article class="hygiene-article">
+                    <div class="hygiene-div">
+                        <h4>Marquez votre personnalité</h4>
+                        <p>
+                            Pour embellir votre corps d’une superbe pièce,
+                            faites confiance à Bérenger pour donner vie à votre
+                            projet de tatouage. Exprimez votre personnalité sous
+                            les aiguilles expertes de nos tatoueurs. Vous pouvez
+                            bénéficier de conseils et
+                            <strong>d'aide à la création</strong> avec notre
+                            objectivité qui ira dans le sens d’une réalisation
+                            parfaite lors de votre passage au salon de tatouage.
+                        </p>
+                        <h4>L'hygiène avant tout</h4>
+                        <p>
+                            Venez en toute tranquillité dans notre salon de
+                            tatouage à Paris ! Au sein de locaux parfaitement
+                            sains et contrôlés régulièrement, nous accordons une
+                            grande importance à
+                            <strong>l'hygiène et aux soins</strong>
+                            pour vous assurer une attention corporelle
+                            irréprochable lors de votre tatouage.
+                        </p>
+                    </div>
+                    <div class="count-div">
+                        <h4>Tarifs</h4>
+                        <p>
+                            70 euros/heure pour le traditionnel, le
+                            semi-réalisme, le dotwork et les projets en noir et
+                            gris.
+                        </p>
+                        <p>80 euros/heure pour les travaux en réalisme.</p>
+                        <p>
+                            Tarif minimum pour du minimaliste, entre 80 et 120
+                            euros/projet.
+                        </p>
+                    </div>
+                </article>
+                <div class="contact-us-div-bis">
+                    <a href="./contact.html" target="_blank"
+                        ><p>NOUS CONTACTER</p></a
+                    >
+                </div>
             </section>
             <!-- Carrousel -->
             <section class="carousel-container">
@@ -240,7 +285,57 @@
             </section>
         </main>
         <footer>
-            <p>© Makizart Tatoo 2024</p>
+            <section class="footer-section">
+                <div class="opening-hours-div">
+                    <h4>HORAIRES</h4>
+                    <p>
+                        Du Lundi au vendredi 11h - 18h30<br />
+                        Samedi 11h - 19h
+                    </p>
+                    <p>Uniquement sur RDV</p>
+                </div>
+                <div class="access-div">
+                    <div class="address-div">
+                        <h4>MAKIZART STUDIO TATTOO</h4>
+                        <p>
+                            5 impasse de la forge<br />
+                            Saint-Laurent en Royans<br />
+                            06.28.53.66.59
+                        </p>
+                        <!-- <p></p> -->
+                        <a href="./contact.html" target="_blank"
+                            >Formulaire de contact</a
+                        >
+                    </div>
+                    <iframe
+                        class="plan"
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d730.9632174962306!2d5.3267234807193224!3d45.02820131670517!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x52edd4fc2cb40443!2sMakizart%20Tattoo!5e1!3m2!1sfr!2sfr!4v1662152431892!5m2!1sfr!2sfr"
+                        style="border: 0"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                    ></iframe>
+                </div>
+                <div class="social-media-div">
+                    <h4>RETROUVEZ-NOUS</h4>
+                    <div class="rs-logo-div">
+                        <a
+                            target="_blank"
+                            href="https://www.facebook.com/makizart.tattoo"
+                            ><img class="logo-fb" src="./assets/logo-fb.png"
+                        /></a>
+                        <a
+                            target="_blank"
+                            href="https://www.instagram.com/makizart.tattoo.studio/"
+                            ><img
+                                class="logo-insta"
+                                src="./assets/logo-instagram.png"
+                        /></a>
+                    </div>
+                    <p>© Makizart Tatoo 2024</p>
+                    <p>Realisé par Manuel Faure Développement</p>
+                </div>
+            </section>
         </footer>
         <a href="#"
             ><img class="chevron-up" src="./assets/chevron-up.png" alt=""

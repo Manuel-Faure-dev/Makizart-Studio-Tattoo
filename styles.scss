@@ -11,9 +11,11 @@ body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
     background-color: black;
+    color: white;
 
     a {
         text-decoration: none;
+        color: white;
     }
 }
 
@@ -22,13 +24,22 @@ header {
     top: 0%;
     width: 100%;
     nav {
-        padding: 0 1.5em;
+        position: relative;
+        padding: 0 6vh;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
         background-color: rgba(0, 0, 0, 0.7);
-        height: 6em;
+        height: 5em;
+        .phone-div {
+            position: absolute;
+            top: 3.5em;
+            right: 6vh;
+        }
+        .text-phone {
+            margin: 0;
+        }
         .phone {
             color: white;
             font-size: 1.4em;
@@ -37,8 +48,8 @@ header {
         }
         .rs-logo-div {
             display: flex;
-            width: 9%;
-            justify-content: space-around;
+            width: 6%;
+            justify-content: space-between;
         }
 
         .logo {
@@ -48,34 +59,67 @@ header {
         .logo-fb {
             max-height: 1.8em;
             @include text-shadow(2, 2, 3, black);
+            transition: all 500ms ease-in-out;
+        }
+        .logo-fb:hover {
+            transform: scale(1.2);
         }
         .logo-insta {
             max-height: 1.8em;
             @include text-shadow(2, 2, 3, black);
+            transition: all 500ms ease-in-out;
         }
-
-        .audio {
-            @include text-shadow(2, 2, 7, black);
-            width: 215px;
+        .logo-insta:hover {
+            transform: scale(1.2);
         }
         a {
-            font-size: 1.2em;
+            font-size: 1em;
             font-weight: 400;
             font-family: 'Poppins', sans-serif;
             color: white;
             @include text-shadow(2, 1, 4, black);
             padding: 0;
-            //height: 2em;
-            transition: all 1000ms ease-in-out;
+            transition: all 800ms ease-in-out;
         }
-        a:nth-child(n + 3):nth-child(-n + 7):hover {
+        .home-a:hover {
+            text-decoration: underline overline;
+            text-decoration-color: #3c3b40;
+            text-decoration-thickness: 0.5em;
+        }
+        .create-a:hover {
             text-decoration: underline overline;
             text-decoration-color: #70056f;
             text-decoration-thickness: 0.5em;
         }
+        .realise-a:hover {
+            text-decoration: underline overline;
+            text-decoration-color: #810e04;
+            text-decoration-thickness: 0.5em;
+        }
+        .contact-a:hover {
+            text-decoration: underline overline;
+            text-decoration-color: #e2a816;
+            text-decoration-thickness: 0.5em;
+        }
+        .access-a:hover {
+            text-decoration: underline overline;
+            text-decoration-color: #1ec821;
+            text-decoration-thickness: 0.5em;
+        }
+        .count-a:hover {
+            text-decoration: underline overline;
+            text-decoration-color: #026fd6;
+            text-decoration-thickness: 0.5em;
+        }
+        // a:nth-child(n + 3):nth-child(-n + 7):hover {
+        //     text-decoration: underline overline;
+        //     text-decoration-color: #70056f;
+        //     text-decoration-thickness: 0.5em;
+        // }
     }
 }
 main {
+    // Section accueil h1 et image de fond psychadélique
     .home-section {
         background-image: url('./assets/fond\ spirit.webp');
         height: max-content;
@@ -87,7 +131,7 @@ main {
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        border: 0.5em double white;
+        //border: 0.5em double white;
         background-color: #000000;
 
         h1 {
@@ -112,25 +156,20 @@ main {
             font-size: 1.8em;
         }
     }
+    // Section de présentation du Studio
     .presentation-section {
         background-color: rgba(0, 0, 0, 1);
-        border: 0.5em double white;
-        margin-top: -0.2em;
         display: flex;
         justify-content: center;
         flex-direction: column;
         align-items: center;
-        //position: relative;
         .presentation-article {
-            padding: 0em 0 2em 0;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
             overflow: hidden;
             max-width: 1140px;
-            //background-image: url('./assets/tatoo\ fond\ noir.jpeg');
-            //position: relative;
             h2 {
                 font-family: 'Poppins', sans-serif;
                 color: white;
@@ -145,6 +184,7 @@ main {
                 text-align: center;
                 font-weight: 200;
                 font-size: 1.2em;
+                margin: 3em 0;
             }
         }
         .slides {
@@ -152,9 +192,7 @@ main {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            //column-gap: 0.9em;
         }
-
         .slides img {
             max-width: 13em;
             height: 25em;
@@ -193,27 +231,11 @@ main {
             transform: scale(1.3);
             color: #f69218;
         }
-        // .pagination {
-        //     display: flex;
-        //     justify-content: center;
-        //     margin-top: 10px;
-        // }
-        // .dot {
-        //     height: 10px;
-        //     width: 10px;
-        //     background-color: #333;
-        //     border-radius: 50%;
-        //     margin: 0 5px;
-        //     cursor: pointer;
-        // }
-        // .dot.active {
-        //     background-color: white;
-        // }
     }
     .owner-article {
         max-width: 1140px;
         display: flex;
-        padding: 0 0 5em 0;
+        //padding: 0;
         .owner-div {
             width: 60%;
             .owner-img {
@@ -240,27 +262,52 @@ main {
             overflow: hidden; /* Empêche également le dépassement du texte en cas de nécessité */
         }
     }
+    .contact-us-div {
+        margin: 3em 0;
+        p {
+            border: 1px solid white;
+            padding: 0.7em 2.2em;
+            transition: all 400ms ease-in-out;
+            border-radius: 0.2em;
+            //@include box-shadow(2, 2, 10, grey);
+        }
+        p:hover {
+            transform: scale(1.1);
+            background-color: white;
+            color: black;
+            font-weight: 700;
+        }
+        a {
+            color: white;
+        }
+    }
 }
 
 // Section Galerie
 .galery-section {
-    margin-top: -0.1em;
-    border: 0.5em double white;
+    //background-image: url('./assets/tatoo\ fond\ noir.jpeg');
+    background-attachment: local;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 4em 0 3.8em 0;
     h3 {
         text-align: center;
         color: white;
         font-size: 3em;
         font-weight: 500;
-        margin: 1.5em 0;
+        margin: 0 0 1.5em 0;
+        text-shadow: 2px 2px 5px black;
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+        padding: 0.2em 0em;
+        width: 1140px;
     }
     .galery-article {
         max-width: 1140px;
         display: flex;
-        padding: 0 0 5em 0;
+        //padding: 0 0 5em 0;
         .galery-slides-div {
             display: flex;
             align-items: center;
@@ -275,21 +322,63 @@ main {
                 width: 12em;
                 height: 15em;
                 object-fit: cover;
-                border: 1px solid white;
+                //border: 1px solid white;
                 transition: all 800ms ease-out;
             }
             img:hover {
                 opacity: 0.4;
+                transform: scale(1.05);
             }
         }
     }
 }
 
-.plan {
-    width: 50%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+.hygiene-section {
+    background-image: url('./assets/fond dark.jpeg');
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    .hygiene-article {
+        //padding: 4em 0;
+        max-width: 1140px;
+    }
+    .hygiene-div {
+        background-color: grey;
+        padding: 0.6em;
+        h4 {
+            margin-top: 0;
+            font-size: 1.2em;
+        }
+    }
+    .count-div {
+        background-color: grey;
+        padding: 0.6em;
+        margin-top: 1.5em;
+        h4 {
+            margin-top: 0;
+            font-size: 1.2em;
+        }
+    }
+    .contact-us-div-bis {
+        margin: 3em 0;
+        p {
+            border: 1px solid white;
+            padding: 0.7em 2.2em;
+            transition: all 400ms ease-in-out;
+            border-radius: 0.2em;
+            //@include box-shadow(2, 2, 10, grey);
+        }
+        p:hover {
+            transform: scale(1.1);
+            background-color: white;
+            color: black;
+            font-weight: 700;
+        }
+        a {
+            color: white;
+        }
+    }
 }
 
 // Chevron-up pour remonter en haut de la page
@@ -367,16 +456,95 @@ main {
 //Footer
 footer {
     width: 100%;
-    background-color: black;
-    height: 10em;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     border-top: 1px solid white;
-    p {
-        font-family: 'Poppins', sans-serif;
+    .footer-section {
+        padding: 2em;
+        display: flex;
+        justify-content: space-around;
+        .opening-hours-div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h4 {
+                margin: 0;
+            }
+            p {
+                text-align: center;
+                line-height: 1.8em;
+            }
+        }
+        .access-div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .address-div {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                h4 {
+                    margin: 0;
+                }
+                p {
+                    text-align: center;
+                    line-height: 1.8em;
+                }
+                a {
+                    margin-bottom: 3em;
+                }
+            }
+        }
+        .social-media-div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h4 {
+                margin: 0;
+            }
+            .rs-logo-div {
+                display: flex;
+                margin: 1.4em 0;
+                width: 5em;
+                justify-content: space-between;
+
+                .logo-fb {
+                    max-height: 1.8em;
+                    @include text-shadow(2, 2, 3, black);
+                    transition: all 500ms ease-in-out;
+                }
+                .logo-fb:hover {
+                    transform: scale(1.2);
+                }
+                .logo-insta {
+                    max-height: 1.8em;
+                    @include text-shadow(2, 2, 3, black);
+                    transition: all 500ms ease-in-out;
+                }
+                .logo-insta:hover {
+                    transform: scale(1.2);
+                }
+            }
+        }
     }
+
+    .plan {
+        width: 50vh;
+        height: 40vh;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+// PAGE CONTACT ET AIDE A LA CREATION
+.banner-div {
+    background-color: white;
+    height: 5em;
+}
+h1 {
+    font-size: 4em;
+    text-align: center;
+    word-spacing: 0.3em;
 }
 
 // .transition-div::before {

@@ -3,9 +3,11 @@ body {
   margin: 0;
   font-family: "Poppins", sans-serif;
   background-color: black;
+  color: white;
 }
 body a {
   text-decoration: none;
+  color: white;
 }
 
 header {
@@ -14,13 +16,22 @@ header {
   width: 100%;
 }
 header nav {
-  padding: 0 1.5em;
+  position: relative;
+  padding: 0 6vh;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.7);
-  height: 6em;
+  height: 5em;
+}
+header nav .phone-div {
+  position: absolute;
+  top: 3.5em;
+  right: 6vh;
+}
+header nav .text-phone {
+  margin: 0;
 }
 header nav .phone {
   color: white;
@@ -30,8 +41,8 @@ header nav .phone {
 }
 header nav .rs-logo-div {
   display: flex;
-  width: 9%;
-  justify-content: space-around;
+  width: 6%;
+  justify-content: space-between;
 }
 header nav .logo {
   max-height: 3.5em;
@@ -40,27 +51,56 @@ header nav .logo {
 header nav .logo-fb {
   max-height: 1.8em;
   text-shadow: 2px 2px 3px black;
+  transition: all 500ms ease-in-out;
+}
+header nav .logo-fb:hover {
+  transform: scale(1.2);
 }
 header nav .logo-insta {
   max-height: 1.8em;
   text-shadow: 2px 2px 3px black;
+  transition: all 500ms ease-in-out;
 }
-header nav .audio {
-  text-shadow: 2px 2px 7px black;
-  width: 215px;
+header nav .logo-insta:hover {
+  transform: scale(1.2);
 }
 header nav a {
-  font-size: 1.2em;
+  font-size: 1em;
   font-weight: 400;
   font-family: "Poppins", sans-serif;
   color: white;
   text-shadow: 2px 1px 4px black;
   padding: 0;
-  transition: all 1000ms ease-in-out;
+  transition: all 800ms ease-in-out;
 }
-header nav a:nth-child(n+3):nth-child(-n+7):hover {
+header nav .home-a:hover {
+  text-decoration: underline overline;
+  text-decoration-color: #3c3b40;
+  text-decoration-thickness: 0.5em;
+}
+header nav .create-a:hover {
   text-decoration: underline overline;
   text-decoration-color: #70056f;
+  text-decoration-thickness: 0.5em;
+}
+header nav .realise-a:hover {
+  text-decoration: underline overline;
+  text-decoration-color: #810e04;
+  text-decoration-thickness: 0.5em;
+}
+header nav .contact-a:hover {
+  text-decoration: underline overline;
+  text-decoration-color: #e2a816;
+  text-decoration-thickness: 0.5em;
+}
+header nav .access-a:hover {
+  text-decoration: underline overline;
+  text-decoration-color: #1ec821;
+  text-decoration-thickness: 0.5em;
+}
+header nav .count-a:hover {
+  text-decoration: underline overline;
+  text-decoration-color: #026fd6;
   text-decoration-thickness: 0.5em;
 }
 
@@ -76,7 +116,6 @@ main .home-section {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  border: 0.5em double white;
   background-color: #000000;
 }
 main .home-section h1 {
@@ -101,15 +140,12 @@ main .home-section p {
 }
 main .presentation-section {
   background-color: rgb(0, 0, 0);
-  border: 0.5em double white;
-  margin-top: -0.2em;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
 }
 main .presentation-section .presentation-article {
-  padding: 0em 0 2em 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -131,6 +167,7 @@ main .presentation-section .presentation-article p {
   text-align: center;
   font-weight: 200;
   font-size: 1.2em;
+  margin: 3em 0;
 }
 main .presentation-section .slides {
   width: 100%;
@@ -180,7 +217,6 @@ main .presentation-section .prev:hover {
 main .owner-article {
   max-width: 1140px;
   display: flex;
-  padding: 0 0 5em 0;
 }
 main .owner-article .owner-div {
   width: 60%;
@@ -205,26 +241,48 @@ main .owner-article .owner-div-text p {
   max-height: 100%; /* Assurez-vous que le texte ne dépasse pas la hauteur de la div */
   overflow: hidden; /* Empêche également le dépassement du texte en cas de nécessité */
 }
+main .contact-us-div {
+  margin: 3em 0;
+}
+main .contact-us-div p {
+  border: 1px solid white;
+  padding: 0.7em 2.2em;
+  transition: all 400ms ease-in-out;
+  border-radius: 0.2em;
+}
+main .contact-us-div p:hover {
+  transform: scale(1.1);
+  background-color: white;
+  color: black;
+  font-weight: 700;
+}
+main .contact-us-div a {
+  color: white;
+}
 
 .galery-section {
-  margin-top: -0.1em;
-  border: 0.5em double white;
+  background-attachment: local;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 4em 0 3.8em 0;
 }
 .galery-section h3 {
   text-align: center;
   color: white;
   font-size: 3em;
   font-weight: 500;
-  margin: 1.5em 0;
+  margin: 0 0 1.5em 0;
+  text-shadow: 2px 2px 5px black;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  padding: 0.2em 0em;
+  width: 1140px;
 }
 .galery-section .galery-article {
   max-width: 1140px;
   display: flex;
-  padding: 0 0 5em 0;
 }
 .galery-section .galery-article .galery-slides-div {
   display: flex;
@@ -239,18 +297,57 @@ main .owner-article .owner-div-text p {
   height: 15em;
   -o-object-fit: cover;
      object-fit: cover;
-  border: 1px solid white;
   transition: all 800ms ease-out;
 }
 .galery-section .galery-article a img:hover {
   opacity: 0.4;
+  transform: scale(1.05);
 }
 
-.plan {
-  width: 50%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+.hygiene-section {
+  background-image: url("./assets/fond dark.jpeg");
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.hygiene-section .hygiene-article {
+  max-width: 1140px;
+}
+.hygiene-section .hygiene-div {
+  background-color: grey;
+  padding: 0.6em;
+}
+.hygiene-section .hygiene-div h4 {
+  margin-top: 0;
+  font-size: 1.2em;
+}
+.hygiene-section .count-div {
+  background-color: grey;
+  padding: 0.6em;
+  margin-top: 1.5em;
+}
+.hygiene-section .count-div h4 {
+  margin-top: 0;
+  font-size: 1.2em;
+}
+.hygiene-section .contact-us-div-bis {
+  margin: 3em 0;
+}
+.hygiene-section .contact-us-div-bis p {
+  border: 1px solid white;
+  padding: 0.7em 2.2em;
+  transition: all 400ms ease-in-out;
+  border-radius: 0.2em;
+}
+.hygiene-section .contact-us-div-bis p:hover {
+  transform: scale(1.1);
+  background-color: white;
+  color: black;
+  font-weight: 700;
+}
+.hygiene-section .contact-us-div-bis a {
+  color: white;
 }
 
 .chevron-up {
@@ -331,14 +428,90 @@ main .owner-article .owner-div-text p {
 
 footer {
   width: 100%;
-  background-color: black;
-  height: 10em;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   border-top: 1px solid white;
 }
-footer p {
-  font-family: "Poppins", sans-serif;
+footer .footer-section {
+  padding: 2em;
+  display: flex;
+  justify-content: space-around;
+}
+footer .footer-section .opening-hours-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer .footer-section .opening-hours-div h4 {
+  margin: 0;
+}
+footer .footer-section .opening-hours-div p {
+  text-align: center;
+  line-height: 1.8em;
+}
+footer .footer-section .access-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer .footer-section .access-div .address-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer .footer-section .access-div .address-div h4 {
+  margin: 0;
+}
+footer .footer-section .access-div .address-div p {
+  text-align: center;
+  line-height: 1.8em;
+}
+footer .footer-section .access-div .address-div a {
+  margin-bottom: 3em;
+}
+footer .footer-section .social-media-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer .footer-section .social-media-div h4 {
+  margin: 0;
+}
+footer .footer-section .social-media-div .rs-logo-div {
+  display: flex;
+  margin: 1.4em 0;
+  width: 5em;
+  justify-content: space-between;
+}
+footer .footer-section .social-media-div .rs-logo-div .logo-fb {
+  max-height: 1.8em;
+  text-shadow: 2px 2px 3px black;
+  transition: all 500ms ease-in-out;
+}
+footer .footer-section .social-media-div .rs-logo-div .logo-fb:hover {
+  transform: scale(1.2);
+}
+footer .footer-section .social-media-div .rs-logo-div .logo-insta {
+  max-height: 1.8em;
+  text-shadow: 2px 2px 3px black;
+  transition: all 500ms ease-in-out;
+}
+footer .footer-section .social-media-div .rs-logo-div .logo-insta:hover {
+  transform: scale(1.2);
+}
+footer .plan {
+  width: 50vh;
+  height: 40vh;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.banner-div {
+  background-color: white;
+  height: 5em;
+}
+
+h1 {
+  font-size: 4em;
+  text-align: center;
+  word-spacing: 0.3em;
 }/*# sourceMappingURL=styles.css.map */
