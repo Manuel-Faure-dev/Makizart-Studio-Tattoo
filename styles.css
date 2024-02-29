@@ -106,8 +106,6 @@ header nav .count-a:hover {
 
 main .home-section {
   background-image: url("./assets/fond spirit.webp");
-  height: -moz-max-content;
-  height: max-content;
   background-attachment: scroll, fixed;
   background-size: cover;
   background-repeat: no-repeat;
@@ -144,14 +142,13 @@ main .presentation-section {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  padding: 0 11em;
 }
 main .presentation-section .presentation-article {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  overflow: hidden;
-  max-width: 1140px;
 }
 main .presentation-section .presentation-article h2 {
   font-family: "Poppins", sans-serif;
@@ -266,7 +263,7 @@ main .contact-us-div a {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 4em 0 3.8em 0;
+  padding: 4em 11em 3.8em 11em;
 }
 .galery-section h3 {
   text-align: center;
@@ -278,19 +275,18 @@ main .contact-us-div a {
   border-top: 1px solid white;
   border-bottom: 1px solid white;
   padding: 0.2em 0em;
-  width: 1140px;
+  width: 100%;
 }
 .galery-section .galery-article {
-  max-width: 1140px;
   display: flex;
 }
 .galery-section .galery-article .galery-slides-div {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-content: center;
   gap: 2em;
+  flex-direction: row;
+  align-content: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 .galery-section .galery-article a img {
   width: 12em;
@@ -477,11 +473,17 @@ footer .footer-section .social-media-div {
 footer .footer-section .social-media-div h4 {
   margin: 0;
 }
+footer .footer-section .social-media-div p {
+  text-align: center;
+}
 footer .footer-section .social-media-div .rs-logo-div {
   display: flex;
   margin: 1.4em 0;
   width: 5em;
   justify-content: space-between;
+}
+footer .footer-section .social-media-div .rs-logo-div p {
+  text-align: center;
 }
 footer .footer-section .social-media-div .rs-logo-div .logo-fb {
   max-height: 1.8em;
@@ -519,10 +521,121 @@ h1 {
 }
 
 @media (max-width: 1024px) {
-  main {
-    width: 100vh;
+  header nav {
+    padding: 0 1%;
+  }
+  header nav .rs-logo-div {
+    width: 8%;
+  }
+  header .phone-div {
+    display: none;
   }
   main .home-section {
-    background-size: contain;
+    height: 36vh;
+    background-image: none;
+  }
+  main .presentation-section {
+    padding: 0 5%;
+  }
+  main .presentation-section .presentation-article h2 {
+    margin-top: 0;
+  }
+  main .presentation-section .slides {
+    -moz-column-gap: 1%;
+         column-gap: 1%;
+  }
+  main .presentation-section .slides img {
+    max-width: 100%;
+  }
+  main .galery-section {
+    padding: 4em 5%;
+  }
+  main .galery-section .galery-article a img {
+    width: 100%;
+    height: 100%;
+  }
+  main .galery-section .galery-slides-div {
+    justify-content: center;
+    flex-direction: column;
+    gap: 2em;
+  }
+  .link-img {
+    max-width: 60vh;
+  }
+  .next {
+    right: 1%;
+    font-size: 6em;
+  }
+  .prev {
+    left: 1%;
+    font-size: 6em;
+  }
+  footer .plan {
+    width: 100%;
+    height: 20vh;
+  }
+}
+@media (max-width: 768px) {
+  main .home-section {
+    margin-top: 4em;
+  }
+  main .home-section h1 {
+    font-size: 2.2em;
+    padding: 1em;
+    width: 75%;
+    border: none;
+    border-top: 2px solid rgb(177, 105, 105);
+    border-bottom: 2px solid rgb(177, 105, 105);
+  }
+  main .presentation-section .presentation-article h2 {
+    margin: 0.5em 0 2em 0;
+  }
+  main .presentation-section .presentation-article p {
+    margin: 1.6em 0 2em 0;
+  }
+  main .presentation-section .presentation-article .slides a:nth-child(1),
+  main .presentation-section .presentation-article .slides a:nth-child(2) {
+    display: none;
+  }
+  main .presentation-section .presentation-article .slides a img {
+    max-height: 30vh;
+    max-width: 16vh;
+  }
+  main .owner-article {
+    flex-direction: column;
+    align-items: center;
+  }
+  main .owner-article .owner-div {
+    width: 100%;
+  }
+  main .owner-article .owner-div .owner-img {
+    height: auto;
+  }
+  main .owner-article .owner-div-text {
+    width: auto;
+  }
+  main .owner-article .owner-div-text p {
+    margin: 0.8em 0 0 0;
+  }
+  main .contact-us-div {
+    margin: 2em 0;
+  }
+  main .hygiene-section .count-div {
+    text-align: center;
+  }
+  main .hygiene-section .hygiene-div h4 {
+    text-align: center;
+  }
+  footer .footer-section {
+    flex-direction: column;
+  }
+  footer .footer-section .opening-hours-div p {
+    margin-top: 0;
+  }
+  footer .footer-section .access-div .address-div h4 {
+    margin: 1em 0 0 0;
+  }
+  footer .footer-section .social-media-div h4 {
+    margin-top: 2em;
   }
 }/*# sourceMappingURL=styles.css.map */

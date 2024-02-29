@@ -122,7 +122,7 @@ main {
     // Section accueil h1 et image de fond psychadélique
     .home-section {
         background-image: url('./assets/fond\ spirit.webp');
-        height: max-content;
+        //height: max-content;
         background-attachment: scroll, fixed;
         background-size: cover;
         background-repeat: no-repeat;
@@ -145,7 +145,6 @@ main {
             border-style: double;
             border-color: rgb(177, 105, 105);
             border-radius: 50%;
-            //border-top-left-radius: 0.2em;
             box-shadow: 20px 10px 40px black;
             padding: 0.4em 1.2em;
             margin: 0;
@@ -163,13 +162,12 @@ main {
         justify-content: center;
         flex-direction: column;
         align-items: center;
+        padding: 0 11em;
         .presentation-article {
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            overflow: hidden;
-            max-width: 1140px;
             h2 {
                 font-family: 'Poppins', sans-serif;
                 color: white;
@@ -291,7 +289,7 @@ main {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 4em 0 3.8em 0;
+    padding: 4em 11em 3.8em 11em;
     h3 {
         text-align: center;
         color: white;
@@ -302,19 +300,20 @@ main {
         border-top: 1px solid white;
         border-bottom: 1px solid white;
         padding: 0.2em 0em;
-        width: 1140px;
+        width: 100%;
+        //width: 1140px;
     }
     .galery-article {
-        max-width: 1140px;
+        //max-width: 1140px;
         display: flex;
         //padding: 0 0 5em 0;
         .galery-slides-div {
             display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            align-content: center;
             gap: 2em;
+            flex-direction: row;
+            align-content: center;
+            flex-wrap: wrap;
+            justify-content: space-between;
         }
 
         a {
@@ -502,11 +501,17 @@ footer {
             h4 {
                 margin: 0;
             }
+            p {
+                text-align: center;
+            }
             .rs-logo-div {
                 display: flex;
                 margin: 1.4em 0;
                 width: 5em;
                 justify-content: space-between;
+                p {
+                    text-align: center;
+                }
 
                 .logo-fb {
                     max-height: 1.8em;
@@ -549,47 +554,160 @@ h1 {
 }
 
 @media (max-width: 1024px) {
+    header {
+        nav {
+            padding: 0 1%;
+            .rs-logo-div {
+                width: 8%;
+            }
+        }
+        .phone-div {
+            display: none;
+        }
+    }
     main {
-        width: 100vh;
         .home-section {
-            background-size: contain;
+            height: 36vh;
+            background-image: none;
+        }
+        .presentation-section {
+            padding: 0 5%;
+            .presentation-article {
+                h2 {
+                    margin-top: 0;
+                }
+            }
+            .slides {
+                column-gap: 1%;
+                img {
+                    max-width: 100%;
+                }
+            }
+        }
+        .galery-section {
+            padding: 4em 5%;
+            .galery-article {
+                a {
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+            .galery-slides-div {
+                justify-content: center;
+                flex-direction: column;
+                gap: 2em;
+                // a:nth-child(6),
+                // a:nth-child(10) {
+                //     display: none;
+                // }
+            }
+        }
+    }
+    .link-img {
+        max-width: 60vh;
+    }
+    .next {
+        right: 1%;
+        font-size: 6em;
+    }
+    .prev {
+        left: 1%;
+        font-size: 6em;
+    }
+    footer {
+        .plan {
+            width: 100%;
+            height: 20vh;
         }
     }
 }
 @media (max-width: 768px) {
     main {
+        .home-section {
+            margin-top: 4em;
+            h1 {
+                font-size: 2.2em;
+                padding: 1em;
+                width: 75%;
+                border: none;
+                border-top: 2px solid rgb(177, 105, 105);
+                border-bottom: 2px solid rgb(177, 105, 105);
+            }
+        }
+        .presentation-section {
+            .presentation-article {
+                h2 {
+                    margin: 0.5em 0 2em 0;
+                }
+                p {
+                    margin: 1.6em 0 2em 0;
+                }
+                .slides {
+                    a:nth-child(1),
+                    a:nth-child(2) {
+                        display: none;
+                    }
+                    a {
+                        img {
+                            max-height: 30vh;
+                            max-width: 16vh;
+                        }
+                    }
+                }
+            }
+        }
+        .owner-article {
+            flex-direction: column;
+            align-items: center;
+            .owner-div {
+                width: 100%;
+                .owner-img {
+                    height: auto;
+                }
+            }
+            .owner-div-text {
+                width: auto;
+                p {
+                    margin: 0.8em 0 0 0;
+                }
+            }
+        }
+        .contact-us-div {
+            margin: 2em 0;
+        }
+        .hygiene-section {
+            .count-div {
+                text-align: center;
+            }
+            .hygiene-div {
+                h4 {
+                    text-align: center;
+                }
+            }
+        }
+    }
+    footer {
+        .footer-section {
+            flex-direction: column;
+            .opening-hours-div {
+                p {
+                    margin-top: 0;
+                }
+            }
+            .access-div {
+                .address-div {
+                    h4 {
+                        margin: 1em 0 0 0;
+                    }
+                }
+            }
+            .social-media-div {
+                h4 {
+                    margin-top: 2em;
+                }
+            }
+        }
     }
 }
-
-// .transition-div::before {
-//     z-index: 1;
-//     content: ''; /* Contenu généré pour le dégradé */
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 100%; /* Hauteur du dégradé en haut */
-//     background: linear-gradient(
-//         to bottom,
-//         rgba(0, 0, 0, 0.5),
-//         rgb(10, 99, 17, 1),
-//         rgb(200, 99, 21, 0.5)
-//     ); /* Dégradé noir transparent en haut */
-// }
-
-// .transition-div::after {
-//     z-index: 1;
-//     content: ''; /* Contenu généré pour le dégradé */
-//     position: absolute;
-//     bottom: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 100%; /* Hauteur du dégradé en bas */
-//     background: linear-gradient(
-//         to bottom,
-//         rgba(0, 0, 0, 1),
-//         rgb(10, 99, 17, 0.5),
-//         rgb(200, 99, 21, 0.5),
-//         rgb(255, 255, 255)
-//     ); /* Dégradé noir transparent en bas */
-// }
