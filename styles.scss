@@ -79,7 +79,7 @@ header {
             color: white;
             @include text-shadow(2, 1, 4, black);
             padding: 0;
-            transition: all 800ms ease-in-out;
+            transition: all 600ms ease-in-out;
         }
         .home-a:hover {
             text-decoration: underline overline;
@@ -339,8 +339,8 @@ main {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    padding-top: 4em;
     .hygiene-article {
-        //padding: 4em 0;
         max-width: 1140px;
     }
     .hygiene-div {
@@ -367,6 +367,7 @@ main {
             padding: 0.7em 2.2em;
             transition: all 400ms ease-in-out;
             border-radius: 0.2em;
+            background: rgba(0, 0, 0, 0.8);
             //@include box-shadow(2, 2, 10, grey);
         }
         p:hover {
@@ -545,6 +546,19 @@ h1 {
     font-size: 4em;
     text-align: center;
     word-spacing: 0.3em;
+}
+
+@media (max-width: 1024px) {
+    main {
+        width: 100vh;
+        .home-section {
+            background-size: contain;
+        }
+    }
+}
+@media (max-width: 768px) {
+    main {
+    }
 }
 
 // .transition-div::before {

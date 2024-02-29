@@ -71,7 +71,7 @@ header nav a {
   color: white;
   text-shadow: 2px 1px 4px black;
   padding: 0;
-  transition: all 800ms ease-in-out;
+  transition: all 600ms ease-in-out;
 }
 header nav .home-a:hover {
   text-decoration: underline overline;
@@ -310,6 +310,7 @@ main .contact-us-div a {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  padding-top: 4em;
 }
 .hygiene-section .hygiene-article {
   max-width: 1140px;
@@ -339,6 +340,7 @@ main .contact-us-div a {
   padding: 0.7em 2.2em;
   transition: all 400ms ease-in-out;
   border-radius: 0.2em;
+  background: rgba(0, 0, 0, 0.8);
 }
 .hygiene-section .contact-us-div-bis p:hover {
   transform: scale(1.1);
@@ -514,4 +516,13 @@ h1 {
   font-size: 4em;
   text-align: center;
   word-spacing: 0.3em;
+}
+
+@media (max-width: 1024px) {
+  main {
+    width: 100vh;
+  }
+  main .home-section {
+    background-size: contain;
+  }
 }/*# sourceMappingURL=styles.css.map */
