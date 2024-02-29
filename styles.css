@@ -25,6 +25,14 @@ header nav {
   background-color: rgba(0, 0, 0, 0.7);
   height: 5em;
 }
+header nav .dropdown-div span {
+  display: none;
+}
+header nav .dropdown-div ul {
+  position: absolute;
+  top: 3em;
+  font-size: 1em;
+}
 header nav .phone-div {
   position: absolute;
   top: 3.5em;
@@ -520,6 +528,10 @@ h1 {
   word-spacing: 0.3em;
 }
 
+.fa-bars {
+  font-size: 2em;
+}
+
 @media (max-width: 1024px) {
   header nav {
     padding: 0 1%;
@@ -576,6 +588,27 @@ h1 {
   }
 }
 @media (max-width: 768px) {
+  header nav {
+    justify-content: space-around;
+    padding: 0;
+  }
+  header nav .dropdown-div span {
+    display: block;
+  }
+  header nav .dropdown-div ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+  header nav a:nth-child(5),
+  header nav a:nth-child(6),
+  header nav a:nth-child(8),
+  header nav a:nth-child(9) {
+    display: none;
+  }
+  header nav .logo {
+    display: none;
+  }
   main .home-section {
     margin-top: 4em;
   }

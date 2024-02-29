@@ -78,3 +78,11 @@ function carousselImg(linkImg, section, div) {
 
 carousselImg(linkElements, carrouselContainer, carrouselContent)
 carousselImg(linkElementsA, carrouselContainer, carrouselContent)
+
+// Gestion du Dropdown
+
+$('.dropdown-ul').hide()
+
+$('.fa-bars').on('click', function (e) {
+    $('.dropdown-ul').show()
+})
