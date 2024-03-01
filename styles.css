@@ -25,13 +25,31 @@ header nav {
   background-color: rgba(0, 0, 0, 0.7);
   height: 5em;
 }
+header nav .dropdown-div {
+  display: none;
+}
 header nav .dropdown-div span {
   display: none;
+  transition: all 500ms ease-in-out;
+}
+header nav .dropdown-div span .fa-bars {
+  font-size: 2em;
+}
+header nav .dropdown-div span:active + ul {
+  transform: translateY(-50px);
+  opacity: 0;
 }
 header nav .dropdown-div ul {
   position: absolute;
-  top: 3em;
+  top: 3.5em;
   font-size: 1em;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  row-gap: 0.6em;
+  text-transform: uppercase;
+  transition: all 700ms ease-in-out;
+  opacity: 1;
 }
 header nav .phone-div {
   position: absolute;
@@ -519,17 +537,144 @@ footer .plan {
 
 .banner-div {
   background-color: white;
-  height: 5em;
+  height: 8em;
 }
 
-h1 {
-  font-size: 4em;
+.create-main {
+  background-color: white;
+}
+.create-main .title-slides-create-section {
+  background-color: black;
+  padding: 0 3em 1.4em 3em;
+}
+.create-main .title-slides-create-section h1 {
+  font-size: 3em;
   text-align: center;
   word-spacing: 0.3em;
+  font-weight: 500;
+  margin: 0.3em 0;
 }
-
-.fa-bars {
-  font-size: 2em;
+.create-main .title-slides-create-section .slides-create-div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.create-main .title-slides-create-section .slides-create-div img {
+  width: 17em;
+  height: 25em;
+  transition: transform 0.5s ease;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: all 800ms ease-out;
+}
+.create-main .title-slides-create-section .slides-create-div img:hover {
+  opacity: 0.4;
+}
+.create-main .create-text-section {
+  background-color: white;
+  padding: 0 11em;
+}
+.create-main .create-text-section .create-text-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3em;
+  color: black;
+  padding: 3.2em 0 1.8em 0;
+}
+.create-main .create-text-section .create-text-div h2 {
+  font-size: 2.2em;
+  margin: 0 0 0.5em 0;
+}
+.create-main .create-text-section .create-text-div p {
+  text-align: center;
+  line-height: 2em;
+  margin: 0;
+}
+.create-main .create-text-section .picture-create-div {
+  color: black;
+  display: flex;
+  justify-content: space-evenly;
+  -moz-column-gap: 2em;
+       column-gap: 2em;
+  align-items: center;
+}
+.create-main .create-text-section .picture-create-div p {
+  margin: 0;
+  text-align: left;
+  line-height: 1.5em;
+}
+.create-main .create-text-section .picture-create-div .picture-div {
+  width: 20em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.create-main .create-text-section .picture-create-div .picture-div h5 {
+  margin: 1.6em 0;
+  font-size: 1.5em;
+  text-align: center;
+}
+.create-main .create-text-section .picture-create-div img {
+  height: 15em;
+  box-shadow: 2px 2px 8px black;
+  height: 20em;
+  max-width: 16em;
+  -o-object-fit: cover;
+     object-fit: cover;
+  box-shadow: 2px 2px 8px black;
+}
+.create-main .create-text-section .picture-create-div .text-div-one {
+  background-color: rgba(232, 206, 181, 0.5294117647);
+  padding: 1em;
+  box-shadow: 2px 2px 8px black;
+  border: 5px double black;
+}
+.create-main .create-text-section .picture-create-div .text-div-two {
+  padding: 1em;
+  box-shadow: 2px 2px 8px black;
+  border: 5px double black;
+}
+.create-main .create-text-section .picture-create-div .text-div-three {
+  background-color: rgba(232, 206, 181, 0.5294117647);
+  padding: 1em;
+  box-shadow: 2px 2px 8px black;
+  border: 5px double black;
+}
+.create-main .create-contact-section {
+  border-top: 5px double black;
+  padding: 3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2em;
+}
+.create-main .create-contact-section h6 {
+  color: black;
+  text-align: center;
+  font-size: 1.2em;
+  margin: 0;
+}
+.create-main .create-contact-section p {
+  border: 1px solid white;
+  padding: 0.7em 2.2em;
+  transition: all 400ms ease-in-out;
+  border-radius: 0.2em;
+  background-color: black;
+  color: white;
+  text-align: center;
+  margin-bottom: 0;
+}
+.create-main .create-contact-section p:hover {
+  transform: scale(1.1);
+  background-color: white;
+  color: black;
+  font-weight: 700;
+  border: 1px solid black;
+}
+.create-main .create-contact-section a {
+  color: white;
 }
 
 @media (max-width: 1024px) {
@@ -539,10 +684,14 @@ h1 {
   header nav .rs-logo-div {
     width: 8%;
   }
+  header nav a {
+    font-size: 0.9em;
+  }
   header .phone-div {
     display: none;
   }
   main .home-section {
+    margin-top: 5em;
     height: 36vh;
     background-image: none;
   }
@@ -550,7 +699,7 @@ h1 {
     padding: 0 5%;
   }
   main .presentation-section .presentation-article h2 {
-    margin-top: 0;
+    margin-top: 3em;
   }
   main .presentation-section .slides {
     -moz-column-gap: 1%;
@@ -592,13 +741,16 @@ h1 {
     justify-content: space-around;
     padding: 0;
   }
+  header nav .dropdown-div {
+    display: block;
+  }
   header nav .dropdown-div span {
     display: block;
   }
-  header nav .dropdown-div ul {
-    display: flex;
-    flex-direction: column;
-    padding: 0;
+  header nav .rs-logo-div {
+    width: 18%;
+    -moz-column-gap: 0.4em;
+         column-gap: 0.4em;
   }
   header nav a:nth-child(5),
   header nav a:nth-child(6),
@@ -610,7 +762,7 @@ h1 {
     display: none;
   }
   main .home-section {
-    margin-top: 4em;
+    margin-top: 7em;
   }
   main .home-section h1 {
     font-size: 2.2em;
@@ -621,7 +773,7 @@ h1 {
     border-bottom: 2px solid rgb(177, 105, 105);
   }
   main .presentation-section .presentation-article h2 {
-    margin: 0.5em 0 2em 0;
+    margin: 2.5em 0 2em 0;
   }
   main .presentation-section .presentation-article p {
     margin: 1.6em 0 2em 0;
@@ -670,5 +822,47 @@ h1 {
   }
   footer .footer-section .social-media-div h4 {
     margin-top: 2em;
+  }
+  .create-main .title-slides-create-section {
+    justify-content: center;
+    padding: 0 0.2em 1.4em 0.2em;
+  }
+  .create-main .title-slides-create-section h1 {
+    font-size: 2em;
+  }
+  .create-main .title-slides-create-section .slides-create-div {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .create-main .title-slides-create-section .slides-create-div img {
+    width: 20em;
+  }
+  .create-main .create-text-section {
+    padding: 0.2em;
+    padding: 0.2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .create-main .create-text-section .create-text-div {
+    text-align: center;
+  }
+  .create-main .create-text-section .picture-create-div {
+    flex-direction: column;
+  }
+  .create-main .create-text-section .picture-create-div .text-div-two {
+    background-color: rgba(232, 206, 181, 0.5294117647);
+  }
+  .create-main .create-text-section .picture-create-div .picture-div {
+    width: 90%;
+    margin: 3em 0;
+  }
+  .create-main .create-text-section .picture-create-div img {
+    height: auto;
+    width: 70%;
+    max-width: none;
+  }
+  .create-main .create-contact-section {
+    margin-top: 0;
   }
 }/*# sourceMappingURL=styles.css.map */

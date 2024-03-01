@@ -1,5 +1,6 @@
 linkElements = $('.slides a') // premier carrousel
 linkElementsA = $('.galery-slides-div a') // second carrousel
+linkElementsCreate = $('.slides-create-div a') // troisième carrousel Aide à la création
 const carrouselContainer = $('.carousel-container')
 const carrouselContent = $('.carousel-content')
 
@@ -78,11 +79,26 @@ function carousselImg(linkImg, section, div) {
 
 carousselImg(linkElements, carrouselContainer, carrouselContent)
 carousselImg(linkElementsA, carrouselContainer, carrouselContent)
+carousselImg(linkElementsCreate, carrouselContainer, carrouselContent)
 
 // Gestion du Dropdown
 
 $('.dropdown-ul').hide()
 
-$('.fa-bars').on('click', function (e) {
-    $('.dropdown-ul').show()
+let toggleMenu = true
+
+$('.toggle-menu-span').on('click', function (e) {
+    if (toggleMenu) {
+        $('.dropdown-ul').show()
+        toggleMenu = false
+    } else {
+        $('.dropdown-ul').hide()
+        toggleMenu = true
+    }
+})
+
+$('.dropdown-ul a').on('click', function () {
+    $('.dropdown-ul').hide()
+    $('.toggle-menu-span').show()
+    console.log('test click')
 })
