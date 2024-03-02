@@ -626,7 +626,6 @@ footer {
             display: flex;
             justify-content: space-evenly;
             column-gap: 2em;
-            align-items: center;
             p {
                 margin: 0;
                 text-align: left;
@@ -708,6 +707,17 @@ footer {
     }
 }
 
+// PAGE CONTACT
+.contact-main {
+    h1 {
+        font-size: 3em;
+        text-align: center;
+        word-spacing: 0.3em;
+        font-weight: 500;
+        margin: 4em 0;
+    }
+}
+
 @media (max-width: 1024px) {
     header {
         nav {
@@ -750,6 +760,12 @@ footer {
                     img {
                         width: 100%;
                         height: 100%;
+                    }
+                    img:hover {
+                        opacity: 1; /* Réinitialiser l'opacité */
+                        transform: scale(
+                            1
+                        ); /* Réinitialiser la transformation */
                     }
                 }
             }
