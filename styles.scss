@@ -708,13 +708,52 @@ footer {
 }
 
 // PAGE CONTACT
-.contact-main {
+.title-section {
+    padding: 12em 0;
+    background-image: url(./assets/fond\ dark.jpeg);
     h1 {
-        font-size: 3em;
+        font-size: 4em;
         text-align: center;
         word-spacing: 0.3em;
         font-weight: 500;
-        margin: 4em 0;
+        margin: 0;
+    }
+}
+.contact-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .contact-text-section {
+        max-width: 960px;
+        padding: 2.6em 1em;
+        p {
+            margin: 0.5em 0;
+        }
+    }
+    .form-section {
+        max-width: 960px;
+        form {
+            padding: 0 2em 3em 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1em;
+            input {
+                padding: 0.6em 2em;
+                border-radius: 0.2em;
+                text-align: center;
+            }
+            textarea {
+                padding: 0.5em 2em;
+                width: 120%;
+            }
+            button {
+                background-color: #13aff0;
+                padding: 0.4em;
+                border-radius: 0.2em;
+            }
+        }
     }
 }
 

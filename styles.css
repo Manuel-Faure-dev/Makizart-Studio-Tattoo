@@ -676,12 +676,53 @@ footer .plan {
   color: white;
 }
 
-.contact-main h1 {
-  font-size: 3em;
+.title-section {
+  padding: 12em 0;
+  background-image: url(./assets/fond\ dark.jpeg);
+}
+.title-section h1 {
+  font-size: 4em;
   text-align: center;
   word-spacing: 0.3em;
   font-weight: 500;
-  margin: 4em 0;
+  margin: 0;
+}
+
+.contact-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact-main .contact-text-section {
+  max-width: 960px;
+  padding: 2.6em 1em;
+}
+.contact-main .contact-text-section p {
+  margin: 0.5em 0;
+}
+.contact-main .form-section {
+  max-width: 960px;
+}
+.contact-main .form-section form {
+  padding: 0 2em 3em 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+.contact-main .form-section form input {
+  padding: 0.6em 2em;
+  border-radius: 0.2em;
+  text-align: center;
+}
+.contact-main .form-section form textarea {
+  padding: 0.5em 2em;
+  width: 120%;
+}
+.contact-main .form-section form button {
+  background-color: #13aff0;
+  padding: 0.4em;
+  border-radius: 0.2em;
 }
 
 @media (max-width: 1024px) {
