@@ -102,3 +102,12 @@ $('.dropdown-ul a').on('click', function () {
     $('.toggle-menu-span').show()
     console.log('test click')
 })
+
+// Page Contact gestion du input number
+function limitPhoneLength() {
+    const phoneInput = document.getElementById('phone')
+    const phoneNumber = phoneInput.value.replace(/\D/g, '') // Retire tous les caractères non numériques
+    const truncatedPhoneNumber = phoneNumber.slice(0, 10) // Limite à 10 chiffres
+
+    phoneInput.value = truncatedPhoneNumber // Met à jour la valeur du champ avec le numéro de téléphone limité
+}

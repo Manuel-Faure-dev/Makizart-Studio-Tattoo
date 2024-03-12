@@ -98,7 +98,7 @@
                     <label for="mail" class="email-label">
                         <input
                             id="mail"
-                            type="text"
+                            type="email"
                             class="email-input"
                             placeholder="Mail"
                         />
@@ -106,9 +106,10 @@
                     <label for="phone" class="phone-label">
                         <input
                             id="phone"
-                            type="number"
+                            type="tel"
                             class="input-phone"
                             placeholder="Téléphone"
+                            oninput="limitPhoneLength()"
                         />
                     </label>
                     <textarea

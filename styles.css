@@ -53,7 +53,7 @@ header nav .dropdown-div ul {
 }
 header nav .phone-div {
   position: absolute;
-  top: 3.5em;
+  top: 3.7em;
   right: 6vh;
 }
 header nav .text-phone {
@@ -711,18 +711,33 @@ footer .plan {
   gap: 1em;
 }
 .contact-main .form-section form input {
-  padding: 0.6em 2em;
+  width: 40vh;
+  padding: 0.6em 0;
   border-radius: 0.2em;
   text-align: center;
 }
 .contact-main .form-section form textarea {
   padding: 0.5em 2em;
-  width: 120%;
+  width: 60vh;
 }
 .contact-main .form-section form button {
-  background-color: #13aff0;
-  padding: 0.4em;
+  border: 1px solid white;
+  padding: 0.7em 2.2em;
+  transition: all 400ms ease-in-out;
   border-radius: 0.2em;
+  background-color: black;
+  color: white;
+  text-align: center;
+  margin-bottom: 0;
+  font-size: 1em;
+  margin: 1.2em 0 1em 0;
+}
+.contact-main .form-section form button:hover {
+  transform: scale(1.1);
+  background-color: white;
+  color: black;
+  font-weight: 700;
+  border: 1px solid black;
 }
 
 @media (max-width: 1024px) {
@@ -916,5 +931,24 @@ footer .plan {
   }
   .create-main .create-contact-section {
     margin-top: 0;
+  }
+  .contact-main .contact-text-section p {
+    text-align: center;
+  }
+  .contact-main .form-section {
+    width: 100%;
+  }
+  .contact-main .form-section form {
+    padding: 0;
+    width: 100%;
+  }
+  .contact-main .form-section form textarea {
+    width: 80%;
+  }
+  .contact-main .form-section form input {
+    width: 30vh;
+  }
+  .contact-main .form-section form button {
+    margin: 1.2em 0 3em 0;
   }
 }/*# sourceMappingURL=styles.css.map */

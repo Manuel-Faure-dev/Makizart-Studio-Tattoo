@@ -60,7 +60,7 @@ header {
         }
         .phone-div {
             position: absolute;
-            top: 3.5em;
+            top: 3.7em;
             right: 6vh;
         }
         .text-phone {
@@ -740,18 +740,33 @@ footer {
             align-items: center;
             gap: 1em;
             input {
-                padding: 0.6em 2em;
+                width: 40vh;
+                padding: 0.6em 0;
                 border-radius: 0.2em;
                 text-align: center;
             }
             textarea {
                 padding: 0.5em 2em;
-                width: 120%;
+                width: 60vh;
             }
             button {
-                background-color: #13aff0;
-                padding: 0.4em;
+                border: 1px solid white;
+                padding: 0.7em 2.2em;
+                transition: all 400ms ease-in-out;
                 border-radius: 0.2em;
+                background-color: black;
+                color: white;
+                text-align: center;
+                margin-bottom: 0;
+                font-size: 1em;
+                margin: 1.2em 0 1em 0;
+            }
+            button:hover {
+                transform: scale(1.1);
+                background-color: white;
+                color: black;
+                font-weight: 700;
+                border: 1px solid black;
             }
         }
     }
@@ -993,6 +1008,29 @@ footer {
 
         .create-contact-section {
             margin-top: 0;
+        }
+    }
+    .contact-main {
+        .contact-text-section {
+            p {
+                text-align: center;
+            }
+        }
+        .form-section {
+            width: 100%;
+            form {
+                padding: 0;
+                width: 100%;
+                textarea {
+                    width: 80%;
+                }
+                input {
+                    width: 30vh;
+                }
+                button {
+                    margin: 1.2em 0 3em 0;
+                }
+            }
         }
     }
 }
