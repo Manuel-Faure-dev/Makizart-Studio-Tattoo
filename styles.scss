@@ -143,7 +143,6 @@ main {
     // Section accueil h1 et image de fond psychadélique
     .home-section {
         background-image: url('./assets/fond\ spirit\ pht.webp');
-        //height: max-content;
         background-attachment: scroll, fixed;
         background-size: cover;
         background-repeat: no-repeat;
@@ -152,7 +151,6 @@ main {
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        //border: 0.5em double white;
         background-color: #000000;
 
         h1 {
@@ -288,7 +286,6 @@ main {
             padding: 0.7em 2.2em;
             transition: all 400ms ease-in-out;
             border-radius: 0.2em;
-            //@include box-shadow(2, 2, 10, grey);
         }
         p:hover {
             transform: scale(1.1);
@@ -388,7 +385,6 @@ main {
             transition: all 400ms ease-in-out;
             border-radius: 0.2em;
             background: rgba(0, 0, 0, 0.8);
-            //@include box-shadow(2, 2, 10, grey);
         }
         p:hover {
             transform: scale(1.1);
@@ -739,6 +735,7 @@ footer {
             flex-direction: column;
             align-items: center;
             gap: 1em;
+
             input {
                 width: 40vh;
                 padding: 0.6em 0;
@@ -1024,8 +1021,11 @@ footer {
                 textarea {
                     width: 80%;
                 }
+                label {
+                    width: 80%;
+                }
                 input {
-                    width: 30vh;
+                    width: 100%;
                 }
                 button {
                     margin: 1.2em 0 3em 0;

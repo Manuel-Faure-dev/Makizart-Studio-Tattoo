@@ -945,8 +945,11 @@ footer .plan {
   .contact-main .form-section form textarea {
     width: 80%;
   }
+  .contact-main .form-section form label {
+    width: 80%;
+  }
   .contact-main .form-section form input {
-    width: 30vh;
+    width: 100%;
   }
   .contact-main .form-section form button {
     margin: 1.2em 0 3em 0;
